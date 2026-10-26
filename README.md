@@ -14,6 +14,18 @@ Asimismo, el módulo asegura el cumplimiento de las normativas tributarias perua
 
 ---
 
+## Primera Implementación
+
+El bloque 3 contempla el diseño de la base de datos y un programa sencillo para comprobar el siguiente recorrido:
+
+1. Registrar la orden de despacho a partir de una orden de venta y generar la Guía de Remisión Electrónica preliminar.
+2. Consultar las órdenes de despacho programadas, transportistas asignados y estados en ruta.
+3. Registrar la entrega conforme al cliente y actualizar el estado a entregado o registrar incidencias.
+
+Las tecnologías y las instrucciones de ejecución se definirán en la guía de implementación.
+
+---
+
 ## Organización y Estructura
 
 El proyecto se organizará siguiendo los principios de Clean Architecture:
@@ -38,3 +50,17 @@ Para la coordinación y votación inter-tribus, el equipo propone el uso del sig
 * Base de Datos: PostgreSQL (Relacional + JSONB, Esquema modular `distribucion`)
 * Infraestructura: Docker y Docker Compose
 * Pruebas (QA): pytest, HTTPX
+
+---
+
+## Historias de Usuario y Tareas
+
+Las historias de usuario se registran como issues con la etiqueta `historia-usuario`:
+
+* HU-01: Registrar una orden de despacho y generar Guía de Remisión Electrónica.
+* HU-02: Consultar programación de entregas y estados en tránsito.
+* HU-03: Registrar entrega en destino y actualizar estado.
+
+Las actividades de arquitectura, scripts de base de datos, backend, frontend y pruebas se registran con la etiqueta `tarea-tecnica` y se relacionan con las historias correspondientes.
+
+El tablero de trabajo organiza las tareas en los siguientes estados: Pendiente → En proceso → En revisión → Terminado.
