@@ -41,6 +41,17 @@ El proyecto se organizará siguiendo los principios de Clean Architecture:
 
 ---
 
+## Equipo
+
+| Integrante | Responsabilidad |
+| :--- | :--- |
+| BACA CALSIN, LEONARDO JUAN JOSE | Scrum Master, aseguramiento de la calidad y seguimiento del trabajo |
+| CHIPANA JERONIMO, GERMAN ARTURO | Arquitectura de software, diccionario de datos y entorno técnico |
+| MEJIA RONDAN, GIOVANNI PATRICK | Backend, diseño y revisión técnica de la base de datos |
+| PALMA APAZA, SANTIAGO ENRIQUE | Product Owner, historias de usuario y frontend |
+
+---
+
 ## Propuesta de Tecnologías
 
 Para la coordinación y votación inter-tribus, el equipo propone el uso del siguiente stack tecnológico:
@@ -64,3 +75,42 @@ Las historias de usuario se registran como issues con la etiqueta `historia-usua
 Las actividades de arquitectura, scripts de base de datos, backend, frontend y pruebas se registran con la etiqueta `tarea-tecnica` y se relacionan con las historias correspondientes.
 
 El tablero de trabajo organiza las tareas en los siguientes estados: Pendiente → En proceso → En revisión → Terminado.
+
+---
+
+## Flujo de Colaboración
+
+1. Seleccionar un issue y confirmar quién lo realizará y quién lo revisará.
+2. Crear la rama de trabajo desde la versión actualizada de main.
+3. Registrar cambios concretos mediante commits descriptivos.
+4. Abrir un Pull Request hacia main, indicando el issue relacionado, los cambios y cómo se comprobaron.
+5. Mover la tarea a En revisión y notificar al revisor con el enlace del Pull Request.
+6. Atender las observaciones en la misma rama y agregar los commits de corrección.
+7. Incorporar los cambios revisados a main y actualizar el estado de la tarea.
+
+Las tareas técnicas se cierran al completar y revisar su entrega. Las historias de usuario se cierran cuando sus criterios de aceptación estén comprobados y el Product Owner acepte el resultado.
+
+---
+
+## Ramas
+
+| Actividad | Rama sugerida |
+| :--- | :--- |
+| Preparación del repositorio | `chore/estructura-inicial` |
+| Arquitectura y guía | `docs/arquitectura` |
+| Base de datos | `feat/base-datos` |
+| Backend | `feat/backend` |
+| Frontend | `feat/frontend` |
+| Pruebas | `test/flujo-principal` |
+
+---
+
+## Commits
+
+Cada commit describe un cambio concreto según la convención estándar. Ejemplos:
+
+* `docs: definir el flujo del programa y alcance de distribucion`
+* `feat: crear las tablas de despachos y guias de remision`
+* `feat: conectar la interfaz con los servicios de despacho`
+* `test: comprobar la generacion de guia electronica y transicion de estados`
+* `fix: validar el formato de placa y licencia de conducir antes de registrar`
